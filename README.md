@@ -9,7 +9,13 @@
 
 Criada por José Valim, um desenvolvedor brasileiro e um dos principais contribuidores do framework Ruby on Rails, Elixir surgiu com o objetivo de combinar a solidez da plataforma Erlang — que é usada em sistemas de telecomunicação com tempo de atividade crítico — com uma sintaxe moderna e produtiva, inspirada em linguagens como Ruby. Ele foi criado para ser escalável e manter sistemas de alta disponibilidade, tornando-o uma escolha popular para aplicativos da Web, sistemas distribuídos e telecomunicações. Elixir combina o melhor dos dois mundos: a simplicidade do Ruby e o poder do Erlang.
 
-O foco do Elixir está em aplicações que exigem alta performance e muitos processos simultâneos, como sistemas financeiros, plataformas de mensagens em tempo real, aplicações IoT, e serviços web escaláveis. Seu modelo funcional evita efeitos colaterais e facilita a manutenção do código, enquanto sua estrutura baseada em processos leves permite criar sistemas que lidam com milhões de conexões simultâneas. 
+Por que usar o Elixir? O foco do Elixir está em aplicações que exigem alta performance e muitos processos simultâneos, como sistemas financeiros, plataformas de mensagens em tempo real, aplicações IoT, e serviços web escaláveis. Seu modelo funcional evita efeitos colaterais e facilita a manutenção do código, enquanto sua estrutura baseada em processos leves permite criar sistemas que lidam com milhões de conexões simultâneas. 
+
+- **Simultaneidade**: O Elixir facilita a escrita de código simultâneo, aproveitando os processos leves do BEAM.
+- **Escalabilidade**: Ideal para aplicativos que precisam lidar com um grande número de conexões simultâneas.
+- **Alta disponibilidade**: Projetado para sistemas que precisam estar constantemente operacionais, com tolerância a falhas.
+- **Desempenho**: aproveita a eficiência da VM Erlang, conhecida por sua baixa latência e alta taxa de transferência.
+- **Comunidade ativa**: Uma comunidade crescente e acolhedora, com muitos recursos e bibliotecas.
 
 <img src="https://www.pngkey.com/png/full/935-9356922_880-x-495-4-phoenix-framework-logo.png" align="right" height="77">
 
