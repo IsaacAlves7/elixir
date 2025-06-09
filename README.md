@@ -8,6 +8,7 @@ O foco do Elixir está em aplicações que exigem alta performance e muitos proc
 
 A linguagem também tem suporte nativo a hot code swapping (atualização de código sem desligar o sistema) e uma comunidade ativa que fornece ferramentas robustas como o framework web **Phoenix**, que oferece desempenho comparável ao de aplicações escritas em linguagens compiladas. Em resumo, Elixir é uma linguagem moderna construída para resolver problemas complexos de concorrência e distribuição de forma eficiente, segura e elegante.
 
+# 🧪 [Elixir] DDD, BDD e TDD
 
 
 
