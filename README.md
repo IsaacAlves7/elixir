@@ -1,5 +1,4 @@
-
-![d521efa71f4f5294148cb972e5fc353a3ca3dc72](https://github.com/user-attachments/assets/7a38b221-ab20-4f6d-b409-b52c37104889)
+<a href=""><img src="d521efa71f4f5294148cb972e5fc353a3ca3dc72](https://github.com/user-attachments/assets/7a38b221-ab20-4f6d-b409-b52c37104889"></a>
 
 > ⚗️💧 **Preparação**: Para este conteúdo, o aluno deverá dispor de um computador com acesso à internet, um web browser com suporte a HTML 5 (Google Chrome, Mozilla Firefox, Microsoft Edge, Safari, Opera etc.), um editor de texto ou IDE (VSCode etc.) e o software Elixir, com a versão mais recente, instalado na sua máquina local.
 
