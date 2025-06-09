@@ -1,4 +1,4 @@
-# It's a repository of Elixir programming 
+# It's a repository of Elixir programming ⚗️💧
 <img src="https://github.com/user-attachments/assets/2ca6c1e3-557d-42ab-8a84-3ed8a8a2ad29" align="right" height="77">
 
 **Elixir** é uma linguagem de programação funcional, concorrente e de propósito geral, projetada para criar aplicações escaláveis e de alta disponibilidade. Ela roda sobre a máquina virtual do Erlang (BEAM), herdando sua robustez e desempenho para sistemas distribuídos, tolerantes a falhas e com forte suporte à concorrência. Criada por José Valim, um desenvolvedor brasileiro, Elixir surgiu com o objetivo de combinar a solidez da plataforma Erlang — que é usada em sistemas de telecomunicação com tempo de atividade crítico — com uma sintaxe moderna e produtiva, inspirada em linguagens como Ruby. 
