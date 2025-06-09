@@ -1,3 +1,5 @@
+> ⚗️💧 **Preparação**: Para este conteúdo, o aluno deverá dispor de um computador com acesso à internet, um web browser com suporte a HTML 5 (Google Chrome, Mozilla Firefox, Microsoft Edge, Safari, Opera etc.), um editor de texto ou IDE (VSCode etc.) e o software Elixir, com a versão mais recente, instalado na sua máquina local.
+
 # It's a repository of Elixir programming ⚗️💧
 <img src="https://github.com/user-attachments/assets/2ca6c1e3-557d-42ab-8a84-3ed8a8a2ad29" align="right" height="77">
 
