@@ -67,7 +67,7 @@ Elixir permite a aplicação de DDD, especialmente quando você utiliza **Phoeni
 * Em vez de classes ou objetos, você organiza **funções puras e structs** dentro de módulos.
 * Você pode modelar **Entidades** (com `defstruct`), **Value Objects**, **Serviços de Domínio** (como funções puras que representam comportamentos) e até **Repositórios** (módulos responsáveis por interagir com o banco, normalmente via `Ecto.Repo`).
 
-**Exemplo:**
+Exemplo:
 
 ```elixir
 defmodule MyApp.Accounts.User do
@@ -82,14 +82,12 @@ defmodule MyApp.Accounts do
 end
 ```
 
- **TDD (Test-Driven Development) em Elixir**
-
-Elixir tem suporte **excelente a testes**, com o framework `ExUnit` incluso por padrão.
+TDD (Test-Driven Development) em Elixir tem suporte excelente a testes, com o framework `ExUnit` incluso por padrão.
 
 * A abordagem TDD (escreva o teste antes da implementação) funciona muito bem porque **Elixir incentiva funções puras e modulares**, o que facilita a testabilidade.
 * O uso de `mix test` é super rápido, e ferramentas como `ExCoveralls` ajudam a medir cobertura de testes.
 
-📌 **Exemplo de teste TDD com ExUnit:**
+Exemplo de teste TDD com ExUnit:
 
 ```elixir
 defmodule MyApp.MathTest do
@@ -108,7 +106,7 @@ Embora Elixir venha com `ExUnit` como padrão, você pode usar ferramentas como 
 * Com o `espec`, você pode escrever testes com uma sintaxe parecida com o **RSpec do Ruby**.
 * Com o `white-bread`, é possível escrever **cenários no estilo Gherkin**, semelhante ao Cucumber, para descrever comportamentos em linguagem natural.
 
-📌 **Exemplo com `espec`:**
+Exemplo com `espec`:
 
 ```elixir
 describe "User registration" do
@@ -119,7 +117,7 @@ describe "User registration" do
 end
 ```
 
-**Resumo comparativo no contexto de Elixir**:
+Resumo comparativo no contexto de Elixir:
 
 | Conceito | Como se aplica em Elixir                                                                   |
 | -------- | ------------------------------------------------------------------------------------------ |
