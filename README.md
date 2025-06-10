@@ -46,6 +46,8 @@ IO.puts("Hello, World!")
 
 # ⚗️ [Elixir] Operadores e expressões
 
+# ⚗️ [Elixir] Listas e Mapas
+
 # ⚗️ [Elixir] Estruturas de programação
 
 # ⚗️ [Elixir] Módulos
