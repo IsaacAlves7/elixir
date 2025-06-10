@@ -40,6 +40,8 @@ Agora, vamos criar um programa simples que imprima `"Hello, World!"` no console.
 IO.puts("Hello, World!")
 ```
 
+## [Elixir] Comentários
+
 # ⚗️ [Elixir] Operadores
 
 
