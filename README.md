@@ -42,8 +42,9 @@ IO.puts("Hello, World!")
 
 ## [Elixir] Comentários
 
-# ⚗️ [Elixir] Operadores e tipos de dados
+# ⚗️ [Elixir] Tipos de dados
 
+# ⚗️ [Elixir] Operadores e expressões
 
 # ⚗️ [Elixir] Estruturas de programação
 
