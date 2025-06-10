@@ -40,6 +40,12 @@ Agora, vamos criar um programa simples que imprima `"Hello, World!"` no console.
 IO.puts("Hello, World!")
 ```
 
+Para executar o programa, use o comando:
+
+```sh
+elixir hello.exs
+```
+
 ## [Elixir] Comentários
 
 # ⚗️ [Elixir] Tipos de dados
