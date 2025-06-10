@@ -37,6 +37,10 @@ Você verá um prompt interativo onde poderá começar a digitar comandos Elixir
 ```elixir
 ```
 
+# ⚗️ [Elixir] Módulos
+
+# ⚗️ [Elixir] Funções
+
 # ⚗️ [Elixir] Recursão
 
 # ⚗️ [Elixir] Mix, a ferramenta de construção do Elixir
