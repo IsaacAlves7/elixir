@@ -27,7 +27,10 @@ Depois de instalar o Elixir, podemos usar o IEx (Interactive Elixir), um REPL (R
 Para iniciar o IEx, abra seu terminal e digite:
 
 ```sh
+iex
 ```
+
+Você verá um prompt interativo onde poderá começar a digitar comandos Elixir.
 
 [![main.ex](https://img.shields.io/badge/-main.ex-purple?style=social&logo=Elixir&logoColor=purple)](#)
 
