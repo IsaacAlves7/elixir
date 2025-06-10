@@ -32,12 +32,16 @@ iex
 
 Você verá um prompt interativo onde poderá começar a digitar comandos Elixir.
 
-[![main.ex](https://img.shields.io/badge/-main.ex-purple?style=social&logo=Elixir&logoColor=purple)](#)
+Agora, vamos criar um programa simples que imprima `"Hello, World!"` no console. Crie um arquivo nomeado com o seguinte conteúdo: `hello.exs`
+
+[![hello.exs](https://img.shields.io/badge/-hello.exs-purple?style=social&logo=Elixir&logoColor=purple)](#)
 
 ```elixir
+IO.puts("Hello, World!")
 ```
 
 # ⚗️ [Elixir] Operadores
+
 
 # ⚗️ [Elixir] Estruturas de programação
 
