@@ -59,7 +59,70 @@ IO.puts("Hello, World!")
 # ⚗️ [Elixir] Mix, a ferramenta de construção do Elixir
 
 # 🧪 [Elixir] DDD, BDD e TDD
+**DDD (Domain-Driven Design)**, **BDD (Behavior-Driven Development)** e **TDD (Test-Driven Development)** podem ser aplicados em Elixir, embora com algumas adaptações ao estilo funcional e às convenções da linguagem. Abaixo explico como cada um desses paradigmas se encaixa no ecossistema Elixir:
 
+Elixir permite a aplicação de DDD, especialmente quando você utiliza **Phoenix** (framework web popular da linguagem), que oferece suporte a **contextos** — um conceito diretamente inspirado em DDD.
 
+* **Contextos** em Phoenix são usados para **organizar o domínio em módulos bem definidos**, promovendo separação de responsabilidades.
+* Em vez de classes ou objetos, você organiza **funções puras e structs** dentro de módulos.
+* Você pode modelar **Entidades** (com `defstruct`), **Value Objects**, **Serviços de Domínio** (como funções puras que representam comportamentos) e até **Repositórios** (módulos responsáveis por interagir com o banco, normalmente via `Ecto.Repo`).
 
+**Exemplo:**
 
+```elixir
+defmodule MyApp.Accounts.User do
+  defstruct [:id, :name, :email]
+end
+
+defmodule MyApp.Accounts do
+  alias MyApp.Accounts.User
+
+  def get_user!(id), do: # busca no banco com Ecto
+  def register_user(attrs), do: # lógica de criação
+end
+```
+
+ **TDD (Test-Driven Development) em Elixir**
+
+Elixir tem suporte **excelente a testes**, com o framework `ExUnit` incluso por padrão.
+
+* A abordagem TDD (escreva o teste antes da implementação) funciona muito bem porque **Elixir incentiva funções puras e modulares**, o que facilita a testabilidade.
+* O uso de `mix test` é super rápido, e ferramentas como `ExCoveralls` ajudam a medir cobertura de testes.
+
+📌 **Exemplo de teste TDD com ExUnit:**
+
+```elixir
+defmodule MyApp.MathTest do
+  use ExUnit.Case
+
+  test "soma dois números" do
+    assert MyApp.Math.add(1, 2) == 3
+  end
+end
+```
+
+**BDD (Behavior-Driven Development) em Elixir
+
+Embora Elixir venha com `ExUnit` como padrão, você pode usar ferramentas como **`espec`** ou **`white-bread`** para testes no estilo BDD.
+
+* Com o `espec`, você pode escrever testes com uma sintaxe parecida com o **RSpec do Ruby**.
+* Com o `white-bread`, é possível escrever **cenários no estilo Gherkin**, semelhante ao Cucumber, para descrever comportamentos em linguagem natural.
+
+📌 **Exemplo com `espec`:**
+
+```elixir
+describe "User registration" do
+  it "creates a user with valid data" do
+    result = Accounts.register_user(%{email: "test@example.com", password: "123456"})
+    expect(result).to be_ok
+  end
+end
+```
+
+**Resumo comparativo no contexto de Elixir**:
+
+| Conceito | Como se aplica em Elixir                                                                   |
+| -------- | ------------------------------------------------------------------------------------------ |
+| **DDD**  | Utilização de contextos, structs e funções puras para modelar domínios.                    |
+| **TDD**  | `ExUnit` nativo e altamente integrado com ferramentas como `mix test`.                     |
+| **BDD**  | Pode ser usado com bibliotecas como `espec`, `white-bread` ou mesmo com `ExUnit` adaptado. |
