@@ -37,6 +37,8 @@ Você verá um prompt interativo onde poderá começar a digitar comandos Elixir
 ```elixir
 ```
 
+# ⚗️ [Elixir] Estruturas de programação
+
 # ⚗️ [Elixir] Módulos
 
 # ⚗️ [Elixir] Funções
