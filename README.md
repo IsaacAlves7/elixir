@@ -105,9 +105,7 @@ defmodule MyApp.MathTest do
 end
 ```
 
-**BDD (Behavior-Driven Development) em Elixir
-
-Embora Elixir venha com `ExUnit` como padrão, você pode usar ferramentas como **`espec`** ou **`white-bread`** para testes no estilo BDD.
+BDD (Behavior-Driven Development) em Elixir, embora Elixir venha com `ExUnit` como padrão, você pode usar ferramentas como **`espec`** ou **`white-bread`** para testes no estilo BDD.
 
 * Com o `espec`, você pode escrever testes com uma sintaxe parecida com o **RSpec do Ruby**.
 * Com o `white-bread`, é possível escrever **cenários no estilo Gherkin**, semelhante ao Cucumber, para descrever comportamentos em linguagem natural.
