@@ -95,6 +95,86 @@ mix new friends
 ```
 
 # 🔥 [Elixir] Phoenix
+<img src="https://www.pngkey.com/png/full/935-9356922_880-x-495-4-phoenix-framework-logo.png" align="right" height="77">
+
+**Phoenix** é um framework web moderno e de alto desempenho escrito em **Elixir**, uma linguagem funcional baseada na máquina virtual do Erlang (BEAM), conhecida por sua concorrência, tolerância a falhas e escalabilidade. Ele foi criado para fornecer uma maneira eficiente e produtiva de construir aplicações web completas, desde APIs RESTful até interfaces interativas em tempo real com WebSockets e LiveView. Em resumo, o Phoenix é uma ferramenta poderosa para desenvolver aplicações web modernas com foco em desempenho, estabilidade e concorrência, aproveitando os benefícios do Elixir e da plataforma Erlang. É ideal para quem busca criar aplicações robustas, reativas e preparadas para escalar sem complexidade.
+
+Diferente de frameworks tradicionais baseados em linguagens imperativas, como Ruby on Rails ou Django, o Phoenix aproveita os princípios funcionais do Elixir para oferecer um modelo de desenvolvimento imutável, concorrente e altamente confiável. Isso significa que ele é especialmente indicado para aplicações que precisam lidar com **grande volume de conexões simultâneas**, como chats, dashboards ao vivo, notificações em tempo real, jogos multiplayer e sistemas distribuídos.
+
+O Phoenix oferece uma estrutura organizada em camadas, com roteador, controladores, views, templates e canais para comunicação em tempo real. Ele também integra o **Ecto**, a biblioteca oficial de acesso a banco de dados no Elixir, que permite mapear, consultar e migrar dados de forma clara e segura. Além disso, com a tecnologia **LiveView**, o Phoenix permite criar aplicações web interativas e dinâmicas sem usar JavaScript no lado do cliente, mantendo toda a lógica no servidor e atualizando a interface via WebSockets de forma eficiente.
+
+A arquitetura do Phoenix é pensada para escalar com segurança e simplicidade. Ele suporta concorrência nativa, hot reload no desenvolvimento, isolamento de processos, distribuição nativa e comunicação entre nós distribuídos. Tudo isso herdado do poder da BEAM, a máquina virtual do Erlang que vem sendo usada há décadas em sistemas que exigem alta disponibilidade, como telecomunicações e bancos.
+
+Para iniciar uma aplicação com Phoenix, o principal framework web do Elixir, você precisa ter o Elixir e o Phoenix instalados. Supondo que já tenha o ambiente configurado, você pode criar uma aplicação do zero com alguns comandos simples e entender como ela é estruturada com base em exemplos de código reais.
+
+Primeiro, crie o projeto com:
+
+```bash
+mix phx.new hello_phoenix
+```
+
+Esse comando vai gerar uma estrutura de diretórios completa com suporte a front-end, back-end, banco de dados e WebSocket. Durante a criação, o Mix perguntará se você deseja instalar as dependências e configurar o banco. Confirme com `Y` (yes) quando solicitado.
+
+Depois de criado, entre na pasta do projeto:
+
+```bash
+cd hello_phoenix
+```
+
+Em seguida, crie e migre o banco de dados:
+
+```bash
+mix ecto.create
+```
+
+E então inicie o servidor local com:
+
+```bash
+mix phx.server
+```
+
+Ao abrir o navegador e acessar `http://localhost:4000`, você verá a página inicial padrão do Phoenix, indicando que a aplicação está rodando corretamente.
+
+Dentro do código, um exemplo de controlador básico seria algo assim:
+
+```elixir
+defmodule HelloPhoenixWeb.PageController do
+  use HelloPhoenixWeb, :controller
+
+  def index(conn, _params) do
+    text(conn, "Bem-vindo ao Phoenix!")
+  end
+end
+```
+
+Esse controlador responde a uma requisição com um simples texto. Para conectá-lo a uma rota, edite o arquivo `lib/hello_phoenix_web/router.ex`:
+
+```elixir
+scope "/", HelloPhoenixWeb do
+  pipe_through :browser
+
+  get "/", PageController, :index
+end
+```
+
+Esse trecho define que ao acessar a raiz (`/`), a aplicação chamará a função `index` do `PageController`.
+
+Se quiser criar uma nova página com HTML, pode usar a engine de templates EEx. Crie um arquivo `index.html.heex` dentro de `lib/hello_phoenix_web/templates/page/` com o conteúdo:
+
+```html
+<h1>Olá, Phoenix!</h1>
+<p>Esta é uma página gerada com template HEEx.</p>
+```
+
+E altere o controller para renderizar essa view:
+
+```elixir
+def index(conn, _params) do
+  render(conn, "index.html")
+end
+```
+
+Esse fluxo já mostra como montar rotas, controladores e templates em Phoenix. A aplicação Phoenix já vem com suporte a PubSub, WebSockets, LiveView, formulários e banco de dados via Ecto. A partir disso, você pode criar schemas, migrar tabelas, lidar com autenticação e desenvolver APIs REST ou interativas com LiveView.
 
 # 🧪 [Elixir] DDD, BDD e TDD
 **DDD (Domain-Driven Design)**, **BDD (Behavior-Driven Development)** e **TDD (Test-Driven Development)** podem ser aplicados em Elixir, embora com algumas adaptações ao estilo funcional e às convenções da linguagem. Abaixo explico como cada um desses paradigmas se encaixa no ecossistema Elixir:
