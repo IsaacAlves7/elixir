@@ -62,6 +62,20 @@ elixir hello.exs
 
 # ⚗️ [Elixir] Recursão
 
+# 📦 [Elixir] Hex
+<a href="https://hex.pm/"><img src="https://github.com/user-attachments/assets/6e2b2e58-a17c-437a-8f55-8eb75621aeb6" align="right" height="77"></a>
+
+**Hex** é o gerenciador de pacotes oficial do ecossistema Elixir e Erlang, responsável por permitir que desenvolvedores compartilhem, publiquem e reutilizem bibliotecas de forma prática, segura e integrada ao fluxo de desenvolvimento. Ele funciona de maneira semelhante a ferramentas como o npm no JavaScript, o pip no Python ou o Cargo no Rust, sendo utilizado principalmente em conjunto com a ferramenta Mix, que é quem interage diretamente com o Hex durante a instalação e gerenciamento das dependências de um projeto.
+
+Quando um desenvolvedor cria uma biblioteca Elixir que pode ser útil para outras aplicações, ele pode empacotá-la e publicá-la no Hex, permitindo que qualquer pessoa a adicione ao seu próprio projeto com apenas algumas linhas no arquivo `mix.exs`. O Mix então usa o Hex para buscar essa dependência, baixá-la do repositório oficial, compilá-la e deixá-la disponível no ambiente do projeto. Essa integração torna o processo extremamente fluido, removendo a necessidade de downloads manuais ou configurações complicadas de caminhos e versões.
+
+Além de permitir o uso de bibliotecas públicas, o Hex também oferece suporte para repositórios privados, autenticação, gerenciamento de versões e publicação de pacotes com metadados bem definidos, como documentação, dependências transitivas e compatibilidade de versões. Isso o torna uma ferramenta útil tanto para projetos abertos quanto para soluções corporativas internas.
+
+Outro destaque do Hex é seu foco em segurança e confiabilidade. Ele verifica a integridade dos pacotes com checksums, garante que as versões não sejam sobrescritas após publicadas e promove boas práticas de versionamento semântico. Tudo isso contribui para a estabilidade do ecossistema, tornando o uso de bibliotecas de terceiros mais confiável.
+
+Em resumo, o Hex é um componente essencial do ecossistema Elixir, viabilizando a colaboração entre desenvolvedores e acelerando o desenvolvimento de aplicações robustas e bem estruturadas. Sua combinação com o Mix forma uma dupla poderosa, que simplifica a instalação de dependências, organiza o ciclo de vida dos pacotes e fortalece a base de projetos em Elixir com eficiência e praticidade.
+
+
 # ⚗️ [Elixir] Mix
 <a href="https://elixirschool.com/pt/lessons/basics/mix/"><img src="https://github.com/user-attachments/assets/c6fbe669-7088-47d7-b700-ae5c4d8e19c5" align="right" height="77"></a>
 
