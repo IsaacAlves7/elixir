@@ -73,7 +73,7 @@ Quando você cria um novo projeto com Elixir, é o Mix quem estrutura automatica
 
 Além disso, Mix permite executar tarefas automáticas com muita facilidade. Comandos como `mix compile` compilam o projeto, `mix test` executa a suíte de testes e `mix run` executa código personalizado. Mix também é extensível: você pode criar suas próprias tasks e usá-las como parte de workflows mais complexos, o que o torna muito poderoso em projetos maiores ou com necessidades específicas.
 
-Outro papel fundamental do Mix é integrar com o Hex, o gerenciador de pacotes do Elixir. Quando você adiciona uma dependência no `mix.exs` e executa `mix deps.get`, o Mix se encarrega de baixar, compilar e organizar todas as bibliotecas externas necessárias para o seu projeto funcionar. Isso torna a gestão de bibliotecas extremamente simples e transparente, sem necessidade de configuração manual.
+Outro papel fundamental do Mix é integrar com o **Hex**, o gerenciador de pacotes do Elixir. Quando você adiciona uma dependência no `mix.exs` e executa `mix deps.get`, o Mix se encarrega de baixar, compilar e organizar todas as bibliotecas externas necessárias para o seu projeto funcionar. Isso torna a gestão de bibliotecas extremamente simples e transparente, sem necessidade de configuração manual.
 
 Em suma, Mix é mais do que uma simples ferramenta de build: ele é o motor que sustenta a produtividade e o fluxo de desenvolvimento no Elixir. Ele facilita a padronização, automatiza tarefas do dia a dia e traz consigo o espírito funcional, claro e direto que é característico da linguagem Elixir. Dominar o uso do Mix é um passo essencial para qualquer desenvolvedor que queira trabalhar com Elixir de maneira séria e profissional.
 
