@@ -75,7 +75,6 @@ Outro destaque do Hex é seu foco em segurança e confiabilidade. Ele verifica a
 
 Em resumo, o Hex é um componente essencial do ecossistema Elixir, viabilizando a colaboração entre desenvolvedores e acelerando o desenvolvimento de aplicações robustas e bem estruturadas. Sua combinação com o Mix forma uma dupla poderosa, que simplifica a instalação de dependências, organiza o ciclo de vida dos pacotes e fortalece a base de projetos em Elixir com eficiência e praticidade.
 
-
 # ⚗️ [Elixir] Mix
 <a href="https://elixirschool.com/pt/lessons/basics/mix/"><img src="https://github.com/user-attachments/assets/c6fbe669-7088-47d7-b700-ae5c4d8e19c5" align="right" height="77"></a>
 
@@ -94,6 +93,8 @@ Gere um novo projeto Elixir com um único comando:
 ```sh
 mix new friends
 ```
+
+# 🔥 [Elixir] Phoenix
 
 # 🧪 [Elixir] DDD, BDD e TDD
 **DDD (Domain-Driven Design)**, **BDD (Behavior-Driven Development)** e **TDD (Test-Driven Development)** podem ser aplicados em Elixir, embora com algumas adaptações ao estilo funcional e às convenções da linguagem. Abaixo explico como cada um desses paradigmas se encaixa no ecossistema Elixir:
