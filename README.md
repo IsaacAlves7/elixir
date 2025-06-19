@@ -22,7 +22,7 @@ Por que usar o Elixir? O foco do Elixir está em aplicações que exigem alta pe
 A linguagem também tem suporte nativo a hot code swapping (atualização de código sem desligar o sistema) e uma comunidade ativa que fornece ferramentas robustas como o framework web **Phoenix**, que oferece desempenho comparável ao de aplicações escritas em linguagens compiladas. Em resumo, Elixir é uma linguagem moderna construída para resolver problemas complexos de concorrência e distribuição de forma eficiente, segura e elegante.
 
 ## [Elixir] Hello, World!
-Depois de instalar o Elixir, podemos usar o IEx (Interactive Elixir), um REPL (Read-Eval-Print Loop) interativo que permite executar comandos do Elixir em tempo real.
+Depois de instalar o Elixir, podemos usar o **IEx (Interactive Elixir)**, um REPL (Read-Eval-Print Loop) interativo que permite executar comandos do Elixir em tempo real.
 
 Para iniciar o IEx, abra seu terminal e digite:
 
