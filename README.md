@@ -47,6 +47,28 @@ elixir hello.exs
 ```
 
 ## [Elixir] Comentários
+Em Elixir, comentários são simples e diretos. Eles são feitos com o símbolo `#` e servem para adicionar explicações ou observações no código que **não são executadas** pelo interpretador.
+
+Tudo que vier após o `#` na mesma linha será ignorado pela compilação:
+
+```elixir
+# Este é um comentário de linha
+IO.puts("Olá, mundo!")  # Este é um comentário ao lado do código
+```
+
+Elixir não possui comentários de múltiplas linhas com sintaxe especial, como `/* ... */` em C ou `""" ... """` em Python. Se quiser escrever um comentário longo, deve usar `#` em cada linha:
+
+```elixir
+# Esta função calcula o dobro de um número
+# e imprime o resultado no terminal
+defmodule Exemplo do
+  def dobro(n) do
+    IO.puts(n * 2)
+  end
+end
+```
+
+Por fim, é comum em projetos Elixir bem escritos usar comentários para explicar lógicas complexas, mas não para descrever cada linha óbvia — isso porque o estilo idiomático da linguagem preza por código limpo e legível por si só.
 
 # ⚗️ [Elixir] Tipos de dados
 
