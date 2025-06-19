@@ -65,7 +65,7 @@ elixir hello.exs
 # ⚗️ [Elixir] Recursão
 
 # ⚗️ [Elixir] Mix
-<img src="https://github.com/user-attachments/assets/c6fbe669-7088-47d7-b700-ae5c4d8e19c5" align="right" height="77">
+<a href="https://elixirschool.com/pt/lessons/basics/mix/"><img src="https://github.com/user-attachments/assets/c6fbe669-7088-47d7-b700-ae5c4d8e19c5" align="right" height="77"></a>
 
 **Mix** é a ferramenta oficial de construção (`build`) e gerenciamento de projetos no ecossistema Elixir. Ela oferece uma série de funcionalidades integradas que tornam o desenvolvimento muito mais produtivo, desde a criação de novos projetos até a compilação, gerenciamento de dependências, execução de testes e geração de documentação. Mix é ao Elixir o que ferramentas como Maven são para o Java ou o que Cargo é para o Rust, porém com uma sintaxe mais simples, alinhada à filosofia funcional e enxuta do Elixir.
 
@@ -76,6 +76,12 @@ Além disso, Mix permite executar tarefas automáticas com muita facilidade. Com
 Outro papel fundamental do Mix é integrar com o **Hex**, o gerenciador de pacotes do Elixir. Quando você adiciona uma dependência no `mix.exs` e executa `mix deps.get`, o Mix se encarrega de baixar, compilar e organizar todas as bibliotecas externas necessárias para o seu projeto funcionar. Isso torna a gestão de bibliotecas extremamente simples e transparente, sem necessidade de configuração manual.
 
 Em suma, Mix é mais do que uma simples ferramenta de build: ele é o motor que sustenta a produtividade e o fluxo de desenvolvimento no Elixir. Ele facilita a padronização, automatiza tarefas do dia a dia e traz consigo o espírito funcional, claro e direto que é característico da linguagem Elixir. Dominar o uso do Mix é um passo essencial para qualquer desenvolvedor que queira trabalhar com Elixir de maneira séria e profissional.
+
+Gere um novo projeto Elixir com um único comando:
+
+```sh
+mix new friends
+```
 
 # 🧪 [Elixir] DDD, BDD e TDD
 **DDD (Domain-Driven Design)**, **BDD (Behavior-Driven Development)** e **TDD (Test-Driven Development)** podem ser aplicados em Elixir, embora com algumas adaptações ao estilo funcional e às convenções da linguagem. Abaixo explico como cada um desses paradigmas se encaixa no ecossistema Elixir:
