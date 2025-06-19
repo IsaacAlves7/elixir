@@ -47,7 +47,7 @@ elixir hello.exs
 ```
 
 ## [Elixir] Comentários
-Em Elixir, comentários são simples e diretos. Eles são feitos com o símbolo `#` e servem para adicionar explicações ou observações no código que **não são executadas** pelo interpretador.
+Em Elixir, comentários são simples e diretos. Eles são feitos com o símbolo `#` e servem para adicionar explicações ou observações no código que não são executadas pelo interpretador.
 
 Tudo que vier após o `#` na mesma linha será ignorado pela compilação:
 
