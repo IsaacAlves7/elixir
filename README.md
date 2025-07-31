@@ -2,6 +2,18 @@
 
 > ⚗️💧 **Preparação**: Para este conteúdo, o aluno deverá dispor de um computador com acesso à internet, um web browser com suporte a HTML 5 (Google Chrome, Mozilla Firefox, Microsoft Edge, Safari, Opera etc.), um editor de texto ou IDE (VSCode etc.) e o software Elixir, com a versão mais recente, instalado na sua máquina local.
 
+Sou um especialista em desenvolvimento de software com foco no ecossistema Elixir, aproveitando sua concorrência leve, tolerância a falhas e imutabilidade para criar aplicações escaláveis, resilientes e altamente disponíveis. Domino boas práticas como SOLID, DRY, KISS, TDA e SoC, com aplicação de design patterns funcionais e arquiteturas como Clean Architecture e Domain-Driven Design, assegurando legibilidade, manutenibilidade e escalabilidade do código.
+
+No front-end, atuo em projetos com SPAs (React, Angular, Vue), SSR (Next.js) e design responsivo com HTML/CSS, Flexbox e CSS Grid, baseados em protótipos do Figma (UI/UX).
+
+No back-end, desenvolvo APIs e sistemas distribuídos com Elixir e Phoenix — tanto com REST quanto GraphQL via absinthe — explorando ao máximo o modelo de concorrência baseado em atores do Erlang/OTP. Integro sistemas com canais em tempo real (Phoenix Channels e LiveView), orquestrando fluxos de eventos com GenServers, Tasks, Supervisors e outras abstrações do OTP para garantir robustez e disponibilidade.
+
+Tenho domínio de Git e pipelines CI/CD (GitLab CI, GitHub Actions), utilizo mix para automação de build/testes/lint (com credo, dialyxir, excoveralls), além de testes com ExUnit, Mox e testes de aceitação com Wallaby ou Hound. Faço monitoramento de métricas e telemetria com ferramentas como Prometheus, Grafana e Telemetry.Metrics, além de logging estruturado com Logger e rastreamento de falhas via Sentry.
+
+Em arquiteturas de microsserviços e sistemas event-driven, utilizo mensageria com Kafka, RabbitMQ, ou integração com Broadway para pipelines de dados concorrentes e resilientes. Também atuo com persistência em bancos SQL (PostgreSQL via Ecto) e NoSQL, mantendo consistência e performance com schemas versionados e migrações.
+
+Implemento ferramentas de analytics como Google Analytics 4 ou soluções próprias integradas com o front-end, visando mensurar a usabilidade de features e o comportamento do usuário. Tenho experiência com implantação de sistemas Elixir/Phoenix em produção usando releases (mix release), Docker, Fly.io, Heroku, AWS e Kubernetes, com foco em alta disponibilidade e entrega contínua.
+
 # It's a repository of Elixir programming ⚗️💧
 <a href="https://elixir-lang.org/install.html"><img src="https://github.com/user-attachments/assets/2ca6c1e3-557d-42ab-8a84-3ed8a8a2ad29" align="right" height="77"></a>
 
