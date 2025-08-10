@@ -128,7 +128,7 @@ Gere um novo projeto Elixir com um único comando:
 mix new friends
 ```
 
-# 🔥 [Elixir] Phoenix
+# 🐦‍🔥 [Elixir] Phoenix
 <img src="https://www.pngkey.com/png/full/935-9356922_880-x-495-4-phoenix-framework-logo.png" align="right" height="77">
 
 **Phoenix** é um framework web moderno e de alto desempenho escrito em **Elixir**, uma linguagem funcional baseada na máquina virtual do Erlang (BEAM), conhecida por sua concorrência, tolerância a falhas e escalabilidade. Ele foi criado para fornecer uma maneira eficiente e produtiva de construir aplicações web completas, desde APIs RESTful até interfaces interativas em tempo real com WebSockets e LiveView. Em resumo, o Phoenix é uma ferramenta poderosa para desenvolver aplicações web modernas com foco em desempenho, estabilidade e concorrência, aproveitando os benefícios do Elixir e da plataforma Erlang. É ideal para quem busca criar aplicações robustas, reativas e preparadas para escalar sem complexidade.
