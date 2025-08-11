@@ -210,6 +210,8 @@ end
 
 Esse fluxo já mostra como montar rotas, controladores e templates em Phoenix. A aplicação Phoenix já vem com suporte a PubSub, WebSockets, LiveView, formulários e banco de dados via Ecto. A partir disso, você pode criar schemas, migrar tabelas, lidar com autenticação e desenvolver APIs REST ou interativas com LiveView.
 
+## [Elixir] LiveView
+
 # 🧪 [Elixir] DDD, BDD e TDD
 **DDD (Domain-Driven Design)**, **BDD (Behavior-Driven Development)** e **TDD (Test-Driven Development)** podem ser aplicados em Elixir, embora com algumas adaptações ao estilo funcional e às convenções da linguagem. Abaixo explico como cada um desses paradigmas se encaixa no ecossistema Elixir:
 
