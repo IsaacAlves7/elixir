@@ -21,6 +21,8 @@ O **Elixir** é uma linguagem de programação dinâmica e funcional, concorrent
 
 Criada por José Valim, um desenvolvedor brasileiro e um dos principais contribuidores do framework Ruby on Rails, Elixir surgiu com o objetivo de combinar a solidez da plataforma Erlang — que é usada em sistemas de telecomunicação com tempo de atividade crítico — com uma sintaxe moderna e produtiva, inspirada em linguagens como Ruby. Ele foi criado para ser escalável e manter sistemas de alta disponibilidade, tornando-o uma escolha popular para aplicativos da Web, sistemas distribuídos e telecomunicações. Elixir combina o melhor dos dois mundos: a simplicidade do Ruby e o poder do Erlang.
 
+<img src="https://github.com/user-attachments/assets/8985a54f-1b44-4d20-adc1-bd4094024979" align="right" height="77">
+
 Por que usar o Elixir? O foco do Elixir está em aplicações que exigem alta performance e muitos processos simultâneos, como sistemas financeiros, plataformas de mensagens em tempo real, aplicações IoT, e serviços web escaláveis. Seu modelo funcional evita efeitos colaterais e facilita a manutenção do código, enquanto sua estrutura baseada em processos leves permite criar sistemas que lidam com milhões de conexões simultâneas. 
 
 - **Simultaneidade**: O Elixir facilita a escrita de código simultâneo, aproveitando os processos leves do BEAM.
