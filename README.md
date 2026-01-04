@@ -1,6 +1,6 @@
 <a href=""><img src="https://github.com/user-attachments/assets/7a38b221-ab20-4f6d-b409-b52c37104889"></a>
 
-> ⚗️💧 **Preparação**: Para este conteúdo, o aluno deverá dispor de um computador com acesso à internet, um web browser com suporte a HTML 5 (Google Chrome, Mozilla Firefox, Microsoft Edge, Safari, Opera etc.), um editor de texto ou IDE (VSCode etc.) e o software Elixir, com a versão mais recente, instalado na sua máquina local.
+> ⚗️ **Preparação**: Para este conteúdo, o aluno deverá dispor de um computador com acesso à internet, um web browser com suporte a HTML 5 (Google Chrome, Mozilla Firefox, Microsoft Edge, Safari, Opera etc.), um editor de texto ou IDE (VSCode etc.) e o software Elixir, com a versão mais recente, instalado na sua máquina local.
 
 Sou um especialista em desenvolvimento de software com foco no ecossistema Elixir, aproveitando sua concorrência leve, tolerância a falhas e imutabilidade para criar aplicações escaláveis, resilientes e altamente disponíveis. Domino boas práticas como SOLID, DRY, KISS, TDA e SoC, com aplicação de design patterns funcionais e arquiteturas como Clean Architecture e Domain-Driven Design, assegurando legibilidade, manutenibilidade e escalabilidade do código.
 
