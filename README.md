@@ -1,7 +1,5 @@
 <a href=""><img src="https://github.com/user-attachments/assets/7a38b221-ab20-4f6d-b409-b52c37104889"></a>
 
-> ⚗️ **Preparação**: Para este conteúdo, o aluno deverá dispor de um computador com acesso à internet, um web browser com suporte a HTML 5 (Google Chrome, Mozilla Firefox, Microsoft Edge, Safari, Opera etc.), um editor de texto ou IDE (VSCode etc.) e o software Elixir, com a versão mais recente, instalado na sua máquina local.
-
 Sou um especialista em desenvolvimento de software com foco no ecossistema Elixir, aproveitando sua concorrência leve, tolerância a falhas e imutabilidade para criar aplicações escaláveis, resilientes e altamente disponíveis. Domino boas práticas como SOLID, DRY, KISS, TDA e SoC, com aplicação de design patterns funcionais e arquiteturas como Clean Architecture e Domain-Driven Design, assegurando legibilidade, manutenibilidade e escalabilidade do código.
 
 No front-end, atuo em projetos com SPAs (React, Angular, Vue), SSR (Next.js) e design responsivo com HTML/CSS, Flexbox e CSS Grid, baseados em protótipos do Figma (UI/UX).
@@ -15,6 +13,8 @@ Em arquiteturas de microsserviços e sistemas event-driven, utilizo mensageria c
 Implemento ferramentas de analytics como Google Analytics 4 ou soluções próprias integradas com o front-end, visando mensurar a usabilidade de features e o comportamento do usuário. Tenho experiência com implantação de sistemas Elixir/Phoenix em produção usando releases (mix release), Docker, Fly.io, Heroku, AWS e Kubernetes, com foco em alta disponibilidade e entrega contínua.
 
 # It's a repository of Elixir programming ⚗️
+> ⚗️ **Preparação**: Para este conteúdo, o aluno deverá dispor de um computador com acesso à internet, um web browser com suporte a HTML 5 (Google Chrome, Mozilla Firefox, Microsoft Edge, Safari, Opera etc.), um editor de texto ou IDE (VSCode etc.) e o software Elixir, com a versão mais recente, instalado na sua máquina local.
+
 <a href="https://elixir-lang.org/install.html"><img src="https://github.com/user-attachments/assets/2ca6c1e3-557d-42ab-8a84-3ed8a8a2ad29" align="right" height="77"></a>
 
 O **Elixir** é uma linguagem de programação dinâmica e funcional, concorrente e de propósito geral, projetada para criar aplicações escaláveis e de alta disponibilidade. Ela roda sobre a máquina virtual do Erlang (BEAM), herdando sua robustez e desempenho para sistemas distribuídos, tolerantes a falhas e com forte suporte à concorrência. Elixir é uma linguagem projetada para ser produtiva, com uma sintaxe elegante e moderna, enquanto aproveita a robustez e os recursos de simultaneidade da máquina virtual Erlang.
