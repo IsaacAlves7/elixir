@@ -471,7 +471,6 @@ set @i = @i + 1
 select $partition.cust_part_func as 'partition number', *
 from tbpartition
 
-
 ---PIVOT
 select * from sales.salesterritory
 
@@ -497,77 +496,3 @@ set @sqlstring = @sqlstring + 'salesytd from sales.salesterritory'
 
 print @sqlstring 
 exec (@sqlstring)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
