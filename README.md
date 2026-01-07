@@ -85,6 +85,69 @@ end
 Por fim, é comum em projetos Elixir bem escritos usar comentários para explicar lógicas complexas, mas não para descrever cada linha óbvia — isso porque o estilo idiomático da linguagem preza por código limpo e legível por si só.
 
 # ⚗️ [Elixir] Tipos de dados
+Na linguagem **Elixir**, os tipos de dados são imutáveis por natureza e fazem parte de um modelo funcional fortemente influenciado por Erlang. Não existe a separação clássica entre “tipos primitivos” e “tipos complexos” como em linguagens imperativas; todos os valores são dados e tudo é tratado de forma uniforme pelo runtime. Elixir é dinamicamente tipada, mas com tipagem forte, o que significa que conversões implícitas não acontecem silenciosamente e erros de tipo aparecem de forma explícita em tempo de execução.
+
+Em conjunto, esses tipos formam um ecossistema coerente, projetado para imutabilidade, concorrência segura e clareza semântica. Entender bem esses tipos é essencial para escrever código idiomático em Elixir e para evitar armadilhas comuns, principalmente para quem vem de linguagens orientadas a objetos ou imperativas.
+
+Os **números** em Elixir são divididos em inteiros e floats. Inteiros podem ter tamanho arbitrário, não havendo risco de overflow como em linguagens de baixo nível. Floats seguem o padrão IEEE 754 de dupla precisão. Operações entre inteiros e floats não fazem coerção automática; se você soma um inteiro com um float, o resultado é float, mas isso é uma regra explícita do operador, não uma conversão implícita escondida.
+
+```elixir
+
+```
+
+Os **átomos** são um dos tipos mais importantes da linguagem. Um átomo é uma constante cujo valor é o próprio nome, como `:ok`, `:error` ou `:user_created`. Eles são amplamente usados para representar estados, chaves de mapas, identificadores simbólicos e resultados de funções. Um detalhe crítico é que átomos não são coletados pelo garbage collector; criar átomos dinamicamente a partir de entrada externa pode causar vazamento de memória no runtime, o que é uma armadilha clássica para iniciantes.
+
+```elixir
+
+```
+
+As **strings** em Elixir são binários UTF-8, ou seja, sequências de bytes que representam texto. Elas são delimitadas por aspas duplas e diferem bastante de listas de caracteres. Uma string é eficiente para texto, mas não para manipulação caractere a caractere, já que caracteres UTF-8 podem ocupar mais de um byte.
+
+```elixir
+
+```
+
+As **listas** são listas encadeadas (linked lists), ideais para processamento recursivo e padrões funcionais. Elas são representadas por colchetes e podem conter elementos de tipos diferentes. Operações como adicionar no início da lista são eficientes, enquanto acesso aleatório ou concatenação no final têm custo linear. Listas de inteiros entre 0 e 255 têm uma interpretação especial no Elixir e podem representar *charlists*, herdadas do Erlang.
+
+```elixir
+
+```
+
+As **tuplas** são estruturas de tamanho fixo, usadas quando se conhece a quantidade de elementos e se deseja acesso rápido por índice. São muito comuns para retornos de funções, especialmente no padrão `{status, result}`, como `{:ok, value}` ou `{:error, reason}`. Diferente das listas, modificar uma tupla implica criar uma nova cópia completa dela.
+
+```elixir
+
+```
+
+Os **mapas** são estruturas chave–valor e representam a principal forma de modelagem de dados em Elixir moderno. Eles substituíram boa parte do uso de *proplists* e *records* do Erlang. Mapas permitem chaves de qualquer tipo, embora átomos e strings sejam os mais comuns. O acesso e atualização são eficientes e existe uma sintaxe especial quando as chaves são átomos conhecidos em tempo de compilação.
+
+```elixir
+
+```
+
+Os **structs** são mapas com uma forma definida. Eles impõem um conjunto fixo de chaves e são usados para representar entidades do domínio de forma mais segura e expressiva. Embora pareçam classes, structs não têm métodos nem herança; são apenas dados estruturados, alinhados com a filosofia funcional da linguagem.
+
+```elixir
+
+```
+
+Os **binários e bitstrings** são tipos fundamentais para lidar com dados brutos, protocolos, arquivos e comunicação de rede. Um binário é uma sequência de bytes, enquanto bitstrings permitem manipulação em nível de bits. Esse tipo é extremamente poderoso e uma das razões pelas quais Elixir e Erlang são tão fortes em sistemas distribuídos e telecomunicações.
+
+```elixir
+
+```
+
+O tipo **booleano** é, na prática, apenas dois átomos especiais: `true` e `false`. Não existe um tipo boolean separado como em outras linguagens. Isso reforça o papel central dos átomos no sistema de tipos.
+
+```elixir
+
+```
+
+O valor **nil** também é um átomo e representa a ausência de valor. Ele é frequentemente usado como retorno padrão de funções ou para indicar campos vazios, mas, diferente de `null` em outras linguagens, seu uso é mais explícito e menos ambíguo.
+
+```elixir
+
+```
 
 # ⚗️ [Elixir] Operadores e expressões
 
@@ -94,7 +157,8 @@ Por fim, é comum em projetos Elixir bem escritos usar comentários para explica
 
 # ⚗️ [Elixir] Módulos
 
-# ⚗️ [Elixir] Funções
+# ⚗️ [Elixir] Paradigma Funcional
+Por fim, existem os **functions** como tipo de primeira classe. Funções podem ser atribuídas a variáveis, passadas como argumento e retornadas por outras funções. Elas carregam seu próprio escopo, o que viabiliza closures e composições sofisticadas, pilares do estilo funcional adotado pelo Elixir.
 
 # ⚗️ [Elixir] Recursão
 
