@@ -151,8 +151,6 @@ O valor **nil** também é um átomo e representa a ausência de valor. Ele é f
 
 # ⚗️ [Elixir] Operadores e expressões
 
-# ⚗️ [Elixir] Listas e Mapas
-
 # ⚗️ [Elixir] Estruturas de programação
 
 # ⚗️ [Elixir] Módulos
