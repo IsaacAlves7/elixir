@@ -19,6 +19,14 @@ Implemento ferramentas de analytics como Google Analytics 4 ou soluções própr
 
 O **Elixir** é uma linguagem de programação dinâmica e funcional, concorrente e de propósito geral, projetada para criar aplicações escaláveis e de alta disponibilidade. Ela roda sobre a máquina virtual do Erlang (BEAM), herdando sua robustez e desempenho para sistemas distribuídos, tolerantes a falhas e com forte suporte à concorrência. Elixir é uma linguagem projetada para ser produtiva, com uma sintaxe elegante e moderna, enquanto aproveita a robustez e os recursos de simultaneidade da máquina virtual Erlang.
 
+O Elixir roda na máquina virtual BEAM. O BEAM foi criado para Erlang – uma linguagem otimizada para grandes sistemas em tempo real que exigem confiabilidade e tempo de funcionamento sólidos como rocha.
+
+Uma das principais capacidades que o BEAM oferece são processos paralelos extremamente leves. Isso permite que um único servidor execute dezenas ou centenas de milhares de processos de forma eficiente simultaneamente.
+
+Elixir traz uma sintaxe mais amigável, inspirada em Ruby, para a base já testada de BEAM. Juntos, eles facilitam muito a programação de sistemas massivamente escaláveis e tolerantes a falhas.
+
+<img width="1432" height="682" alt="unnamed" src="https://github.com/user-attachments/assets/6bb37c99-f804-4f47-ad9b-9ca1ae338c8f" />
+
 Criada por José Valim, um desenvolvedor brasileiro e um dos principais contribuidores do framework Ruby on Rails, Elixir surgiu com o objetivo de combinar a solidez da plataforma Erlang — que é usada em sistemas de telecomunicação com tempo de atividade crítico — com uma sintaxe moderna e produtiva, inspirada em linguagens como Ruby. Ele foi criado para ser escalável e manter sistemas de alta disponibilidade, tornando-o uma escolha popular para aplicativos da Web, sistemas distribuídos e telecomunicações. Elixir combina o melhor dos dois mundos: a simplicidade do Ruby e o poder do Erlang.
 
 <img src="https://github.com/user-attachments/assets/8985a54f-1b44-4d20-adc1-bd4094024979" align="right" height="77">
@@ -335,6 +343,103 @@ Internamente, o Discord chama esses servidores de "guildas" – então usaremos 
 Antes do MidJourney, as maiores guildas tinham cerca de 1 milhão de membros – comunidades enormes de jogos como Roblox e Fortnite.
 
 A equipe de engenharia do Discord achava que 1 milhão de membros era muito próximo do máximo que uma guilda podia suportar. Vamos explorar o porquê – mas primeiro, um pouco de contexto rápido sobre as tecnologias que sustentam o Discord.
+
+Assim, aproveitando os processos leves do BEAM, o código Elixir que alimenta o Discord pode "espalhar" mensagens para centenas de milhares de usuários ao redor do mundo simultaneamente. No entanto, limites surgem à medida que as comunidades crescem.
+
+Infraestrutura em tempo real do Discord: Como mencionado, o Discord lida com toda a comunicação em tempo real usando processos Elixir na máquina virtual BEAM altamente concorrente.
+
+<img width="1424" height="676" alt="unnamed" src="https://github.com/user-attachments/assets/3b735125-cd28-473e-a773-8f0e705a74e4" />
+
+O caminho de uma mensagem através da infraestrutura em tempo real do Discord para outros usuários e bots em uma guilda
+
+Internamente, cada comunidade do Discord é chamada de "guilda". Um "processo de guilda" dedicado ao Elixir cuida da coordenação e do roteamento para cada guilda. Isso rastreia todos os usuários conectados à guilda.
+
+Cada usuário online tem um "processo de sessão" separado do Elixir. Quando o processo da guilda recebe uma nova mensagem, evento ou atualização, ele espalha essa informação para os processos relevantes da sessão. Esses processos de sessão então enviam a atualização pelo WebSocket para os clientes do Discord.
+
+Essa arquitetura oferece uma forma econômica de lidar com milhões de guildas ativas em um grande conjunto de servidores Linux na infraestrutura de nuvem do Discord.
+
+No entanto, limites de escalonamento surgem à medida que as guildas crescem. Distribuir mensagens e eventos para mais usuários gera muito mais trabalho. Guildas maiores também têm mais atividade para distribuir.
+
+Assim, a carga de processos da guilda cresce muito mais rápido conforme o número de usuários aumenta. O BEAM ajuda muito, mas há um limite para o que um processo BEAM pode suportar.
+
+Por isso o Discord achou muito difícil ultrapassar 1 milhão de usuários simultâneos por guilda.
+
+MaxJourney: Com esse pano de fundo estabelecido, vamos voltar à história principal. Diante de uma crise crescente devido ao crescimento descontrolado do Midjourney, o Discord formou uma pequena equipe de engenheiros seniores para investigar os problemas. Essa equipe se chamava MaxJourney.
+
+Veja o que eles conseguiram.
+
+Perfilamento Detalhado de Desempenho: Entender onde os sistemas gastam tempo e memória é fundamental antes de melhorá-los. A equipe utilizou várias técnicas de perfilamento para analisar o desempenho dos processos da guilda.
+
+O mais simples era amostrar trilhas de pilha para revelar operações caras. Isso rapidamente evidencia os problemas sem muito esforço. No entanto, dados mais ricos eram necessários.
+
+Então eles instrumentaram o ciclo de eventos para registrar métricas em cada tipo de mensagem. Isso incluiu frequência, tempos mínimos/máximos/médios de processamento. Essa análise revelou as operações mais custosas para otimizar. Os baratos podem ser ignorados.
+
+O uso de memória também foi examinado, pois impacta as necessidades de hardware e o throughput de coleta de lixo.
+
+Para estimar tamanhos de grandes estruturas de dados de forma razoavelmente rápida, foi construída uma biblioteca auxiliar para amostrar mapas e listas. Evita atravessar completamente todos os elementos.
+
+Essa amostragem revelou campos intensivos em memória para refatoração.
+
+Munida de visibilidade desses pontos críticos de tempo e memória, a equipe agora podia mirar sistematicamente otimizações para reescrever códigos ineficientes.
+
+<img width="1440" height="846" alt="unnamed" src="https://github.com/user-attachments/assets/e6b1d383-c4c5-4706-8ea1-1cef5f9b8349" />
+
+Sessões Passivas - Evitando Trabalhos Desnecessários
+A primeira otimização da equipe foi reduzir o trabalho desnecessário. Eles perceberam que o aplicativo cliente nem sempre precisava de todas as atualizações para guildas que os usuários não estavam visualizando ativamente no primeiro plano do app.
+
+Então implementaram conexões "passivas" para essas guildas. Conexões passivas pulam o processamento e a transmissão de dados até que o usuário abra a guilda.
+
+Mais de 90% das conexões entre usuários e guilda tornaram-se passivas para servidores grandes. Esse corte exigiu trabalho de 90%, reduzindo muito a carga.
+
+No entanto, MidJourney continuou crescendo. Então, isso sozinho não era suficiente.
+
+Otimização de Relés - Distribuição do Fanout entre Máquinas
+Já existiam relés para dividir o trabalho de fanout entre os processos BEAM para escalabilidade. Relays só são habilitados para guildas grandes, onde mantêm conexões de sessão em nome da guilda.
+
+Cada relé gerencia o fanout e permissões para até 15.000 usuários. Isso permitiu aproveitar mais processos BEAM para atender grandes guildas.
+
+Originalmente, os relays duplicavam listas completas de membros. Era simples de implementar, mas para guildas enormes com milhões de membros, dezenas de listas copiadas desperdiçavam uma enorme quantidade de RAM.
+
+Além disso, criar relés atrasava guildas massivas por segundos enquanto serializava e transmitia dados dos membros.
+
+Então a equipe otimizou os relés para rastrear apenas o pequeno subconjunto de membros necessários por relé.
+
+Mantendo os Servidores Responsivos
+Além do throughput geral, garantir baixa latência era fundamental. Assim, a equipe analisou operações com alta duração por chamada, além do tempo total.
+
+Processos de Trabalhadores e ETS
+Os principais culpados eram as iterações dos membros que tomavam segundos, bloqueando guildas. A solução foram processos de trabalho para descarregar esses processos. Os trabalhadores utilizam o ETS, um banco de dados em memória para compartilhamento rápido de dados entre processos BEAM.
+
+Os membros eram armazenados no ETS, com mudanças recentes no monte da guilda. Esse modelo híbrido mantinha a memória da guilda pequena.
+
+Para tarefas lentas, os trabalhadores são gerados para executá-las assíncronamente usando os dados ETS compartilhados, liberando a guilda para continuar lidando com as mensagens.
+
+Um exemplo de tarefa lenta é lidar com a migração de guildas entre máquinas. Copiar o estado do processo antigo da guilda para o novo normalmente atrasa o antigo por minutos. Mas transferir isso para um trabalhador evita bloquear o processo antigo da guilda para lidar com mensagens recebidas.
+
+Descarga do Coletor
+Outra ideia era transferir a distribuição de grupos das guildas para processos "remetentes" separados, reduzindo ainda mais a carga de trabalho das guildas e isolando os processos da pressão da rede.
+
+No entanto, esse desempenho quebrou inesperadamente devido à coleta de lixo patológica. A análise mostrou que foi acionado ao liberar pequenas memórias fora do heap.
+
+Ajustar o tamanho do heap binário virtual resolveu isso. Agora o offload podia ser ativado, melhorando significativamente o throughput.
+
+Por meio de otimização sistemática, a equipe da MaxJourney alcançou o aparentemente impossível – expandir a capacidade da guilda 15 vezes para manter o MidJourney prosperando no Discord.
+
+https://substack.com/redirect/65743a08-9c76-40f1-a69c-9ac2b603b171?j=eyJ1IjoiMmRpcmZwIn0.DgQpD9vnxeDXnbOGqr5r4QICWGtxf2wFAnKNG8yY6Aw
+
+https://substack.com/redirect/0a80e427-4a2e-4d67-9a7b-e2528c6769c6?j=eyJ1IjoiMmRpcmZwIn0.DgQpD9vnxeDXnbOGqr5r4QICWGtxf2wFAnKNG8yY6Aw
+
+https://substack.com/redirect/4892dbe9-ed66-4869-90e5-ad7524c433ee?j=eyJ1IjoiMmRpcmZwIn0.DgQpD9vnxeDXnbOGqr5r4QICWGtxf2wFAnKNG8yY6Aw
+
+https://substack.com/redirect/d351698c-39cf-43f9-b0e2-5331a65e70a8?j=eyJ1IjoiMmRpcmZwIn0.DgQpD9vnxeDXnbOGqr5r4QICWGtxf2wFAnKNG8yY6Aw
+
+https://substack.com/redirect/d107dbbb-8570-4e9f-aaa0-9a538cb40a62?j=eyJ1IjoiMmRpcmZwIn0.DgQpD9vnxeDXnbOGqr5r4QICWGtxf2wFAnKNG8yY6Aw
+
+https://substack.com/redirect/e5017cac-381f-43df-ad66-443331092412?j=eyJ1IjoiMmRpcmZwIn0.DgQpD9vnxeDXnbOGqr5r4QICWGtxf2wFAnKNG8yY6Aw
+
+https://substack.com/redirect/d5be0af6-8456-4885-a41f-96a049be438d?j=eyJ1IjoiMmRpcmZwIn0.DgQpD9vnxeDXnbOGqr5r4QICWGtxf2wFAnKNG8yY6Aw
+
+https://substack.com/redirect/f8b98605-32d1-4368-ae43-3a03cc70b42f?j=eyJ1IjoiMmRpcmZwIn0.DgQpD9vnxeDXnbOGqr5r4QICWGtxf2wFAnKNG8yY6Aw
 
 # 🧪 [Elixir] DDD, BDD e TDD
 **DDD (Domain-Driven Design)**, **BDD (Behavior-Driven Development)** e **TDD (Test-Driven Development)** podem ser aplicados em Elixir, embora com algumas adaptações ao estilo funcional e às convenções da linguagem. Abaixo explico como cada um desses paradigmas se encaixa no ecossistema Elixir:
