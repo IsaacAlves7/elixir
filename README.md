@@ -320,6 +320,22 @@ Para usar o MidJourney, você precisa de uma conta no Discord. A maioria dos usu
 
 <img width="1392" height="825" alt="unnamed" src="https://github.com/user-attachments/assets/5fb4a3db-e158-4b04-bcf6-abd5fb576bc7" />
 
+O Discord corria o risco de perder essa nova comunidade importante se não agisse rápido.
+
+Esta é a história de como a equipe do Discord resolveu criativamente esse desafio. Eles encontraram maneiras de expandir drasticamente o que sua infraestrutura podia suportar – mantendo a comunidade vibrante do MidJourney ativa no Discord.
+
+O **Discord** é um aplicativo de chat popular usado por centenas de milhões de pessoas para se conectar. Originalmente para jogadores, agora todos os tipos de comunidades o usam – desde clubes de caminhada até grupos de estudo e grandes comunidades de jogos.
+
+No Discord, um "servidor" hospeda uma comunidade. Possui canais de chat para discutir tópicos escolhidos pelo dono do servidor.
+
+Internamente, o Discord chama esses servidores de "guildas" – então usaremos esse termo daqui para frente.
+
+![unnamed](https://github.com/user-attachments/assets/5503152a-7c2f-4f09-bcb6-1968ca100d81)
+
+Antes do MidJourney, as maiores guildas tinham cerca de 1 milhão de membros – comunidades enormes de jogos como Roblox e Fortnite.
+
+A equipe de engenharia do Discord achava que 1 milhão de membros era muito próximo do máximo que uma guilda podia suportar. Vamos explorar o porquê – mas primeiro, um pouco de contexto rápido sobre as tecnologias que sustentam o Discord.
+
 # 🧪 [Elixir] DDD, BDD e TDD
 **DDD (Domain-Driven Design)**, **BDD (Behavior-Driven Development)** e **TDD (Test-Driven Development)** podem ser aplicados em Elixir, embora com algumas adaptações ao estilo funcional e às convenções da linguagem. Abaixo explico como cada um desses paradigmas se encaixa no ecossistema Elixir:
 
