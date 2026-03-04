@@ -274,7 +274,51 @@ end
 
 Esse fluxo já mostra como montar rotas, controladores e templates em Phoenix. A aplicação Phoenix já vem com suporte a PubSub, WebSockets, LiveView, formulários e banco de dados via Ecto. A partir disso, você pode criar schemas, migrar tabelas, lidar com autenticação e desenvolver APIs REST ou interativas com LiveView.
 
-## [Elixir] LiveView
+## [Elixir] Phoenix LiveView
+**LiveView** normalmente se refere ao **Phoenix LiveView**, uma tecnologia do ecossistema Elixir. O nome completo mais conhecido é **Phoenix LiveView**, que faz parte do framework web **Phoenix Framework**.
+
+LiveView é uma forma de construir interfaces web interativas **sem escrever JavaScript pesado no frontend**. A lógica da interface roda no servidor (em Elixir), e o navegador recebe apenas as atualizações de estado via WebSocket.
+
+Em vez de: Frontend (React/Vue/etc.) ↔ API REST ↔ Backend
+
+Você tem: Browser ↔ WebSocket ↔ LiveView no servidor
+
+Quando algo muda (clique, formulário, evento), o navegador envia o evento para o servidor. O servidor processa, atualiza o estado e envia apenas o “diff” do HTML de volta. O DOM é atualizado automaticamente.
+
+Isso é possível porque o Elixir roda na BEAM (a mesma VM do Erlang), que é extremamente eficiente para lidar com milhares de conexões simultâneas.
+
+Na prática, LiveView permite:
+
+– Atualizações em tempo real
+– Formulários reativos
+– Validação instantânea
+– Dashboards ao vivo
+– Chats
+– Sem SPA complexa
+
+Tudo com renderização server-side.
+
+É diferente de frameworks tradicionais porque:
+
+– Não é SPA puro
+– Não é apenas SSR estático
+– Não depende de grandes bundles JS
+– Mantém estado no servidor
+
+Conceitualmente, ele é parecido com:
+
+– Hotwire (Rails)
+– Server Components do React
+– ASP.NET Blazor Server
+
+Mas com um modelo muito consistente graças ao Elixir. LiveView é uma das partes mais interessantes do ecossistema porque une concorrência massiva com simplicidade de frontend.
+
+## [Elixir] Como o Discord atende 15 milhões de usuários em um único servidor
+No início do verão de 2022, a equipe de operações do Discord notou uma atividade incomumente alta em seus painéis. Eles acharam que era um ataque de bot, mas era tráfego legítimo do MidJourney – uma nova comunidade em rápido crescimento para gerar imagens de IA a partir de prompts de texto.
+
+Para usar o MidJourney, você precisa de uma conta no Discord. A maioria dos usuários do MidJourney entra em um servidor principal do Discord. Esse servidor cresceu tão rápido que logo atingiu o antigo limite do Discord de cerca de 1 milhão de usuários por servidor.
+
+<img width="1392" height="825" alt="unnamed" src="https://github.com/user-attachments/assets/5fb4a3db-e158-4b04-bcf6-abd5fb576bc7" />
 
 # 🧪 [Elixir] DDD, BDD e TDD
 **DDD (Domain-Driven Design)**, **BDD (Behavior-Driven Development)** e **TDD (Test-Driven Development)** podem ser aplicados em Elixir, embora com algumas adaptações ao estilo funcional e às convenções da linguagem. Abaixo explico como cada um desses paradigmas se encaixa no ecossistema Elixir:
