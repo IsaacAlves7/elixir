@@ -287,9 +287,9 @@ Esse fluxo já mostra como montar rotas, controladores e templates em Phoenix. A
 
 LiveView é uma forma de construir interfaces web interativas **sem escrever JavaScript pesado no frontend**. A lógica da interface roda no servidor (em Elixir), e o navegador recebe apenas as atualizações de estado via WebSocket.
 
-Em vez de: Frontend (React/Vue/etc.) ↔ API REST ↔ Backend
+- [] Em vez de: Frontend (React/Vue/etc.) ↔ API REST ↔ Backend
 
-Você tem: Browser ↔ WebSocket ↔ LiveView no servidor
+- [x] Você tem: Browser ↔ WebSocket ↔ LiveView no servidor
 
 Quando algo muda (clique, formulário, evento), o navegador envia o evento para o servidor. O servidor processa, atualiza o estado e envia apenas o “diff” do HTML de volta. O DOM é atualizado automaticamente.
 
