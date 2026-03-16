@@ -168,7 +168,7 @@ Por fim, existem os **functions** como tipo de primeira classe. Funções podem 
 
 # ⚗️ [Elixir] Recursão
 
-# 📦 [Elixir] Hex
+# 📦 [Elixir] Hex e Mix
 <a href="https://hex.pm/"><img src="https://github.com/user-attachments/assets/6e2b2e58-a17c-437a-8f55-8eb75621aeb6" align="right" height="77"></a>
 
 **Hex** é o gerenciador de pacotes oficial do ecossistema Elixir e Erlang, responsável por permitir que desenvolvedores compartilhem, publiquem e reutilizem bibliotecas de forma prática, segura e integrada ao fluxo de desenvolvimento. Ele funciona de maneira semelhante a ferramentas como o npm no JavaScript, o pip no Python ou o Cargo no Rust, sendo utilizado principalmente em conjunto com a ferramenta Mix, que é quem interage diretamente com o Hex durante a instalação e gerenciamento das dependências de um projeto.
@@ -181,7 +181,6 @@ Outro destaque do Hex é seu foco em segurança e confiabilidade. Ele verifica a
 
 Em resumo, o Hex é um componente essencial do ecossistema Elixir, viabilizando a colaboração entre desenvolvedores e acelerando o desenvolvimento de aplicações robustas e bem estruturadas. Sua combinação com o Mix forma uma dupla poderosa, que simplifica a instalação de dependências, organiza o ciclo de vida dos pacotes e fortalece a base de projetos em Elixir com eficiência e praticidade.
 
-# ⚗️ [Elixir] Mix
 <a href="https://elixirschool.com/pt/lessons/basics/mix/"><img src="https://github.com/user-attachments/assets/c6fbe669-7088-47d7-b700-ae5c4d8e19c5" align="right" height="77"></a>
 
 **Mix** é a ferramenta oficial de construção (`build`) e gerenciamento de projetos no ecossistema Elixir. Ela oferece uma série de funcionalidades integradas que tornam o desenvolvimento muito mais produtivo, desde a criação de novos projetos até a compilação, gerenciamento de dependências, execução de testes e geração de documentação. Mix é ao Elixir o que ferramentas como Maven são para o Java ou o que Cargo é para o Rust, porém com uma sintaxe mais simples, alinhada à filosofia funcional e enxuta do Elixir.
