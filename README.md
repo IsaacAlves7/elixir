@@ -1,4 +1,6 @@
-<a href=""><img src="https://github.com/user-attachments/assets/7a38b221-ab20-4f6d-b409-b52c37104889"></a>
+<a href="https://github.com/IsaacAlves7/elixir"><img src="https://github.com/user-attachments/assets/7a38b221-ab20-4f6d-b409-b52c37104889"></a>
+
+> Versículo chave: "Consagre ao Senhor tudo o que você faz, e os seus planos serão bem-sucedidos." - Provérbios 16:3
 
 Sou um especialista em desenvolvimento de software com foco no ecossistema Elixir, aproveitando sua concorrência leve, tolerância a falhas e imutabilidade para criar aplicações escaláveis, resilientes e altamente disponíveis. Domino boas práticas como SOLID, DRY, KISS, TDA e SoC, com aplicação de design patterns funcionais e arquiteturas como Clean Architecture e Domain-Driven Design, assegurando legibilidade, manutenibilidade e escalabilidade do código.
 
